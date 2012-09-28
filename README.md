@@ -1,4 +1,4 @@
-# Uuiddqd [![Build Status](https://secure.travis-ci.org/simi/uuiddqd-php.png)](http://travis-ci.org/simi/uuiddqd-php)
+# Uuiddqd-ruby [![Build Status](https://secure.travis-ci.org/simi/uuiddqd-php.png)](http://travis-ci.org/simi/uuiddqd-php)
 
 Simple libuuid ruby c binding
 

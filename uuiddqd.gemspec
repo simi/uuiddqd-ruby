@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
 
   # specify any dependencies here; for example:
   gem.add_development_dependency "rake-compiler"
+  gem.add_development_dependency "minitest"
 end

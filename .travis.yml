@@ -1,7 +1,6 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - rbx-19mode
+  - 2.5.3
 before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq uuid-dev

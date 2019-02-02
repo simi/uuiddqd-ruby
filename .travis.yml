@@ -1,6 +1,11 @@
+os:
+  - linux
+  - osx
 language: ruby
 rvm:
   - 2.5.3
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq uuid-dev
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq uuid-dev; fi
+ - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+ - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ossp-uuid; fi

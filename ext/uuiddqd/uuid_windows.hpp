@@ -1,6 +1,5 @@
 #include "ruby.h"
 #include <Rpc.h>
-#pragma comment(lib, "Rpcrt4.lib")
 
 VALUE method_generate(VALUE self) {
   UUID uuid = {0};

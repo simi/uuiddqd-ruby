@@ -2,17 +2,15 @@
 #include <Rpc.h>
 
 VALUE method_generate(VALUE self) {
-  UUID uuid = {0};
-  char * uuid_string;
+  UUID uuid;
+  RPC_CSTR string_uuid;
+  VALUE ruby_uuid;
 
   ::UuidCreate(&uuid);
 
-  RPC_CSTR szUuid = NULL;
-  if (::UuidToStringA(&uuid, &szUuid) == RPC_S_OK)
-  {
-    uuid_string = (char*) szUuid;
-    ::RpcStringFreeA(&szUuid);
-  }
+  ::UuidToStringA(&uuid, &string_uuid);
+  ruby_uuid = rb_str_new2((char*) string_uuid);
+  ::RpcStringFreeA(&string_uuid);
 
-  return rb_str_new2(uuid_string);
+  return ruby_uuid;
 }

@@ -2,10 +2,10 @@
 #include <uuid/uuid.h>
 
 VALUE method_generate(VALUE self) {
-  uuid_t my_uuid;
-  uuid_generate(my_uuid);
+  uuid_t uuid;
+  char string_uuid[36];
 
-  char stringy[36];
-  uuid_unparse(my_uuid, stringy);
-  return rb_str_new2(stringy);
+  uuid_generate_random(uuid);
+  uuid_unparse(uuid, string_uuid);
+  return rb_str_new(string_uuid, 36);
 }

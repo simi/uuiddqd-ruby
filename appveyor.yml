@@ -6,4 +6,4 @@ install:
 build: off
 
 test_script:
-  - bundle exec rake -rdevkit
+  - ruby bin/rake -rdevkit

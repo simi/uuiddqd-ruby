@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestUuiddqd < MiniTest::Unit::TestCase
+class TestUuiddqd < Minitest::Test
   def setup
     @uuid = Uuiddqd.generate
   end
